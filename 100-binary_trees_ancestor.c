@@ -12,7 +12,7 @@
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
-	binary_tree_t *curf, *curs;
+	const binary_tree_t *curf, *curs;
 	size_t depf = 0, deps = 0;
 
 	if ((first == NULL) || (second == NULL))
@@ -28,7 +28,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	while ((curf != NULL) && (curs != NULL))
 	{
 		if (curf == curs)
-			return (curf);
+			return ((binary_tree_t *)curf);
 		curf = curf->parent;
 		curs = curs->parent;
 	}
