@@ -18,10 +18,11 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 	newroot->parent = NULL;
 	/* Moving newroot->left over to tree */
 	tree->right = newroot->left;
-	newroot->left->parent = tree;
+	if (tree->right)
+		tree->right->parent = tree;
 	/* Moving tree over to newroot */
 	newroot->left = tree;
-	tree->parent = newroot;
+	newroot->left->parent = newroot;
 
 	return (newroot);
 }
