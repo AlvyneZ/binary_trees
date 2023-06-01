@@ -4,7 +4,7 @@
  * binary_tree_sibling - Finds the sibling of a node ie the node
  *  with the same parent
  *
- * @tree: pointer to the node of the tree
+ * @node: pointer to the node of the tree
  *
  * Return: the sibling of the node
  */
