@@ -1,7 +1,5 @@
 #include "binary_trees.h"
 
-#define __MAX(a, b)		(((a) >= (b)) ? (a) : (b))
-
 /**
  * binary_tree_depth - Measures the depth of an element in a binary tree
  *
